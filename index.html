@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News from bbc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container"></div>
+<a href="https://newsapi.org/">NEWSAPI</a>
+<script src="NewsApi.js"></script>
+<script>
+    const provider = new NewsProvider('https://newsapi.org/v1/articles?source=bbc-news&apiKey=80be8dc88ae142598d903f6989d92c25','container');
+    provider.processData();
+</script>
+
+</body>
+</html>

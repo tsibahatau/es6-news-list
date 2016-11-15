@@ -1,0 +1,10 @@
+
+.articleColumn{
+margin: 1em;
+}
+.article {
+    display: flex;
+    align-items: center;
+    max-width: 50%;
+    margin: 0 auto;
+}
