@@ -1,6 +1,12 @@
 {
   "name": "es6-news",
   "version": "1.0.0",
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es6": true
+    }
+  },
   "description": "news for bbc via es6",
   "main": "NewsApi.js",
   "scripts": {

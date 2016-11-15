@@ -1,7 +1,18 @@
 {
+  "env": {
+    "browser": true,
+    "node": true
+  },
   "extends": "airbnb",
   "rules": {
     "indent": [2, 4],
-    "no-unused-vars": 0
+    "no-unused-vars": 0,
+    "no-restricted-syntax": [
+      2,
+      "BreakStatement",
+      "DebuggerStatement",
+      "LabeledStatement",
+      "WithStatement"
+    ]
   }
 }

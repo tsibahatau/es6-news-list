@@ -1,7 +1,6 @@
 /**
  * Created by Tsimur on 14.11.2016.
  */
-/* eslint no-restricted-syntax: [0, "ForInStatement"] */
 
 
 class Article {
@@ -10,7 +9,6 @@ class Article {
         this.articleData = articleData;
     }
     getArticleView() {
-        /* eslint-env browser */
         const div = document.createElement('div');
         div.className = 'article';
         div.innerHTML = `<div class="articleColumn articleImageColumn"> 
@@ -50,7 +48,6 @@ class NewsProvider {
     }
 
     processData() {
-        /* eslint-env browser */
         fetch(this.newsEndpoint).then((response) => {
             if (response.status !== 200) {
                 console.log(`Error while loading data! Status Code: ${response.status}`);
@@ -59,7 +56,7 @@ class NewsProvider {
 
             response.json().then((data) => {
                 const newsPresenter = new NewsFeed(document
-                .getElementById(this.newsContainer), data);
+                    .getElementById(this.newsContainer), data);
                 newsPresenter.render();
             });
         });
