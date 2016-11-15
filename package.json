@@ -1,0 +1,27 @@
+{
+  "name": "es6-news",
+  "version": "1.0.0",
+  "description": "news for bbc via es6",
+  "main": "NewsApi.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsibahatau/tsibahatau.git"
+  },
+  "author": "Tsibahatau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsibahatau/tsibahatau/issues"
+  },
+  "homepage": "https://github.com/tsibahatau/tsibahatau#readme",
+  "devDependencies": {
+    "eslint": "^3.10.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.1.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.6.0"
+  }
+}
