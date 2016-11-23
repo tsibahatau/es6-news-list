@@ -9,9 +9,12 @@
 <body>
 <div id="container"></div>
 <a href="https://newsapi.org/" class="attributionLink"> News API</a>
-<script src="NewsApi.js"></script>
+<script type="text/javascript" src="babel-polyfill.js"></script>
+<script type="text/javascript" src="promise-polyfill.js"></script>
+<script type="text/javascript" src="fetch-polyfill.js"></script>
+<script type="text/javascript" src="NewsApi-compiled.js"></script>
 <script>
-    const provider = new NewsProvider('https://newsapi.org/v1/articles?source=bbc-news&apiKey=80be8dc88ae142598d903f6989d92c25','container');
+    var provider = new NewsProvider('https://newsapi.org/v1/articles?source=bbc-news&apiKey=80be8dc88ae142598d903f6989d92c25','container');
     provider.processData();
 </script>
 
