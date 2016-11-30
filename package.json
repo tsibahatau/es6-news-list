@@ -11,8 +11,9 @@
   "main": "NewsApi.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --ext .js",
-    "build": "babel NewsApi.js --out-file NewsApi-compiled.js"
+    "lint": "eslint ./src --ext .js",
+    "build": "webpack",
+    "start:dev": "webpack-dev-server --inline --hot"
   },
   "repository": {
     "type": "git",

@@ -3,6 +3,7 @@ export class Article {
     constructor(articleData) {
         this.articleData = articleData;
     }
+    
     getArticleView() {
         const div = document.createElement('div');
         div.className = 'article';
