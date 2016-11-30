@@ -1,6 +1,6 @@
-import { NewsFeed } from './NewsFeed.js';
+import NewsFeed from './NewsFeed';
 
-export class NewsProvider {
+export default class NewsProvider {
 
     constructor(newsEndpoint, newsContainer) {
         this.newsEndpoint = newsEndpoint;

@@ -1,5 +1,5 @@
 document.getElementById('loadAll').onclick = function () {
-  require(['./index'], function (loadData) {
-    loadData();
-  });
+    require(['./index'], (loadData) => {
+        loadData();
+    });
 };

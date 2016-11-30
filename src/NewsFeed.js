@@ -1,6 +1,6 @@
-import { Article } from './Article.js';
+import Article from './Article';
 
-export class NewsFeed {
+export default class NewsFeed {
 
     constructor(newsContainer, newsData) {
         this.newsContainer = newsContainer;
