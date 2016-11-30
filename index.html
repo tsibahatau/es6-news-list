@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News from bbc</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dist/style.css">
 </head>
 <body>
 <div id="container"></div>
@@ -12,11 +12,7 @@
 <script type="text/javascript" src="babel-polyfill.js"></script>
 <script type="text/javascript" src="promise-polyfill.js"></script>
 <script type="text/javascript" src="fetch-polyfill.js"></script>
-<script type="text/javascript" src="NewsApi-compiled.js"></script>
-<script>
-    var provider = new NewsProvider('https://newsapi.org/v1/articles?source=bbc-news&apiKey=80be8dc88ae142598d903f6989d92c25','container');
-    provider.processData();
-</script>
+<script type="text/javascript" src="dist/bundle.js"></script>
 
 </body>
 </html>
