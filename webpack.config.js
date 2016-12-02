@@ -8,7 +8,8 @@ const pluginsArray = [];
 if (!develop) {
   pluginsArray.push(new webpack.optimize.UglifyJsPlugin());
 };
-pluginsArray.push(new HtmlWebpackPlugin({ template: 'index.html' }));
+
+pluginsArray.push(new HtmlWebpackPlugin({ template: 'src/index.html' }));
 module.exports = {
     entry: [
       './src/app.js',
@@ -22,7 +23,8 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.js$/, exclude: /node_modules/, loader: 'babel'},
-            { test: /\.scss$/, loaders:["style", "css?sourceMap", 'postcss', "sass?sourceMap" ]}
+            { test: /\.scss$/, loaders:["style?sourceMap", "css?sourceMap", 'postcss', "sass?sourceMap" ]},
+            { test: /\.css$/, loaders:["style?sourceMap", "css?sourceMap", 'postcss']}
         ]
     },
     plugins: pluginsArray
