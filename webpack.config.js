@@ -17,13 +17,12 @@ module.exports = {
     output: {
         path:  'dist',
         filename: '[name]_[hash].js'
-        //publicPath: '/dist/'
     },
     devtool: develop ? 'cheap-inline-module-source-map': null,
     module: {
         loaders: [
             { test: /\.js$/, exclude: /node_modules/, loader: 'babel'},
-            { test: /\.scss$/, loaders:["style", "css", "sass"]}
+            { test: /\.scss$/, loaders:["style", "css", 'postcss', "sass" ]}
         ]
     },
     plugins: pluginsArray
