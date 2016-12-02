@@ -1,25 +1,29 @@
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 const develop = process.env.NODE_ENV === 'development';
-pluginsArray = [];
+const pluginsArray = [];
+
 if (!develop) {
-  pluginsArray.push(new webpack.optimize.UglifyJsPlugin({ sourceMap:false }));
+  pluginsArray.push(new webpack.optimize.UglifyJsPlugin());
 };
+pluginsArray.push(new HtmlWebpackPlugin({ template: 'index.html' }));
 module.exports = {
     entry: [
       './src/app.js',
     ],
 
     output: {
-        path:  __dirname + '/dist',
-        filename: '[name].js',
-        publicPath: '/dist/'
+        path:  'dist',
+        filename: '[name]_[hash].js'
+        //publicPath: '/dist/'
     },
     devtool: develop ? 'cheap-inline-module-source-map': null,
     module: {
         loaders: [
-            { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
-            { test: /\.scss$/, loaders:["style-loader", "css-loader", "sass-loader"]}
+            { test: /\.js$/, exclude: /node_modules/, loader: 'babel'},
+            { test: /\.scss$/, loaders:["style", "css", "sass"]}
         ]
     },
     plugins: pluginsArray
