@@ -22,7 +22,7 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.js$/, exclude: /node_modules/, loader: 'babel'},
-            { test: /\.scss$/, loaders:["style", "css", 'postcss', "sass" ]}
+            { test: /\.scss$/, loaders:["style", "css?sourceMap", 'postcss', "sass?sourceMap" ]}
         ]
     },
     plugins: pluginsArray
