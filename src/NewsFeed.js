@@ -1,16 +1,15 @@
-import Article from './Article';
-
+import ArticleVisitor from './ArticleVisitor'
 export default class NewsFeed {
-
-    constructor(newsContainer, newsData) {
+    
+    constructor(newsContainer) {
         this.newsContainer = newsContainer;
-        this.newsData = newsData;
     }
-
-    render() {
-        for (const article of this.newsData.articles) {
-            this.newsContainer.appendChild(new Article(article).getArticleView());
+    
+    render(newsData) {
+        const visitor = new ArticleVisitor(this.newsContainer);
+        for (const article of newsData) {
+            visitor.visit(article)
         }
     }
-
+    
 }

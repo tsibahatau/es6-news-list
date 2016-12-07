@@ -1,5 +1,5 @@
 import NewsFeed from './NewsFeed';
-
+import NewsFacade from './NewsFacade';
 export default class NewsProvider {
 
     constructor(newsEndpoint, newsContainer) {
@@ -16,8 +16,8 @@ export default class NewsProvider {
 
             response.json().then((data) => {
                 const newsPresenter = new NewsFeed(document
-                    .getElementById(this.newsContainer), data);
-                newsPresenter.render();
+                    .getElementById(this.newsContainer));
+                newsPresenter.render(new NewsFacade(data).getArticles());
             });
         });
     }
