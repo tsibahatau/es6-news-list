@@ -1,5 +1,6 @@
 import NewsFeed from './NewsFeed';
 import NewsFacade from './NewsFacade';
+
 export default class NewsProvider {
 
     constructor(newsEndpoint, newsContainer) {

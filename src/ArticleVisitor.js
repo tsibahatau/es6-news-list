@@ -1,9 +1,10 @@
-import Article from './Article'
+import Article from './Article';
+
 export default class ArticleVisitor {
-    constructor(container){
+    constructor(container) {
         this.container = container;
     }
-    visit(articleData){
+    visit(articleData) {
         this.container.appendChild(new Article(articleData).getArticleView());
     }
 }

@@ -1,17 +1,16 @@
 export default class QueryBuilder {
-    constructor(){
-        this.url = `https://newsapi.org/v1/articles?source=$XXX_source&apiKey=$XXX_apikey`
+    constructor() {
+        this.url = 'https://newsapi.org/v1/articles?source=$XXX_source&apiKey=$XXX_apikey';
     }
-    newsSource(source){
-        this.url = this.url.replace('$XXX_source',source);
+    newsSource(source) {
+        this.url = this.url.replace('$XXX_source', source);
         return this;
     }
-    apiKey(key){
-        this.url = this.url.replace('$XXX_apikey',key);
+    apiKey(key) {
+        this.url = this.url.replace('$XXX_apikey', key);
         return this;
     }
-    build(){
+    build() {
         return this.url;
     }
-    
 }
