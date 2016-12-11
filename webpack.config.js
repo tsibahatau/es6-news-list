@@ -19,7 +19,7 @@ module.exports = {
         path:  'dist',
         filename: '[name]_[hash].js'
     },
-    devtool: develop ? 'cheap-inline-module-source-map': null,
+    devtool: develop ? 'source-map': null,
     module: {
         loaders: [
             { test: /\.js$/, exclude: /node_modules/, loader: 'babel'},
